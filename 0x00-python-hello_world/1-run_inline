@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "#!/usr/bin/python3\n$PYCODE"
+echo "python3#!/usr/bin/python3\n$PYCODE"
