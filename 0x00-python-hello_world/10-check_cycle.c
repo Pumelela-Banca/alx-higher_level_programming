@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
 /**
  * check_cycle - checks to see if list is a cycle
  * @list: linked list
@@ -10,9 +9,7 @@ int check_cycle(listint_t *list)
 {
 	listint_t *copy;
 	listint_t *location;
-	unsigned int n;
 
-	n = 0;
 	copy = list;
 
 	while (copy != NULL)
@@ -20,13 +17,11 @@ int check_cycle(listint_t *list)
 		location = list;
 		while (location != NULL)
 		{
-			if (location == copy)
-				n++;
+			if (location == copy && location->next == copy->next)
+				return (1);
 			location = location->next;
 		}
-		if (n > 1)
-			return (1);
-		n = 0;
+		copy = copy->next;
 	}
 	return (0);
 }
