@@ -6,9 +6,11 @@ def uppercase(str):
     str: string
     Return: void
     """
+    oh = 0
     for x in str:
         if ord(x) > 96 and ord(x) < 123:
-            print("{:c}".format(ord(x) - 32), end='')
+            oh = ord(x) - 32 
         else:
-            print(x, end='')
+            oh = ord(x)
+        print("{:c}".format(oh), end='')
     print()
