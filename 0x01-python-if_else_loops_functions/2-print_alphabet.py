@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 x = 97
 while x < 122:
-    print(f"{x:c}", end='')
+    print(f"{:c}".format(x), end='')
     x+=1
