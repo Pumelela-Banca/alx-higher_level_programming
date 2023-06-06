@@ -9,7 +9,7 @@ def uppercase(str):
     oh = 0
     for x in str:
         if ord(x) > 96 and ord(x) < 123:
-            oh = ord(x) - 32 
+            oh = ord(x) - 32
         else:
             oh = ord(x)
         print("{:c}".format(oh), end='')
