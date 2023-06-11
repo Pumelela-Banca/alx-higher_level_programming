@@ -8,6 +8,6 @@ def print_matrix_integer(matrix=[[]]):
     str = '' # save to remove last space
     for row in matrix:
         for col in row:
-            str += "{} ".format(col)
+            str += "{:d} ".format(col)
         str = str[:-1]
         print(str)
