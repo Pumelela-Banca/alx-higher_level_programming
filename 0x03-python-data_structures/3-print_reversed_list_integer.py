@@ -7,7 +7,7 @@ def print_reversed_list_integer(my_list=[]):
     msu = len(my_list)
     start = -1
     while True:
-        print("{}".format(my_list[start]))
+        print("{:d}".format(my_list[start]))
         start -= 1
         if start + msu == 0:
             break
