@@ -9,5 +9,5 @@ def print_reversed_list_integer(my_list=[]):
     while True:
         print("{:d}".format(my_list[start]))
         start -= 1
-        if start + msu == 0:
+        if start + msu == -1:
             break
