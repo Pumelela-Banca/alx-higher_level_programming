@@ -15,10 +15,12 @@ int is_palindrome(listint_t **head)
 	listint_t *test, *prev, *new, *temp;
 	int sum = 1;
 
+	if (*head == NULL)
+		return (1);
 	test = prev = *head;
 	if (test->next == NULL)
-		return (0);
-	if (*head == NULL || (test->next->next == NULL && test->n == test->next->next->n))
+		return (1);
+	if (test->next->next == NULL && test->n == test->next->next->n)
 		return (1);
 	while (test->next != NULL)
 	{
