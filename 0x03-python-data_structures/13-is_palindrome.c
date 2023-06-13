@@ -67,7 +67,6 @@ int compare(listint_t *new, listint_t *old)
 	two = old;
 	while (two != NULL || one != NULL)
 	{
-		printf("new == %d ++ old == %d\n=======", one->n, two->n);
 		if (new->n != old->n)
 			return (0);
 		one = one->next;
