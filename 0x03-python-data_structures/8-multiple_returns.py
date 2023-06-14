@@ -6,5 +6,5 @@ def multiple_returns(sentence):
     @sentence: string
     """
     if not sentence:
-        return (None,)
+        return (0, None)
     return (len(sentence), sentence[0])
