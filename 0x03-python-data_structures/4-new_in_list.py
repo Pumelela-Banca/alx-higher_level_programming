@@ -15,6 +15,7 @@ def new_in_list(my_list, idx, element):
         new[idx] = element
         return new
 
+
 def _copy(my_list):
     """
     _copy - copies a list and returns copy
