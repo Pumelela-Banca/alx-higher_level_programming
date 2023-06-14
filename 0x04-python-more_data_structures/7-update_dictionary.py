@@ -7,7 +7,7 @@ def update_dictionary(a_dictionary, key, value):
     @key: update
     @value: new data
     """
-    if key == None or value == None:
+    if key is None or value is None:
         return a_dictionary
     if key in a_dictionary.keys():
         a_dictionary[key] = value
