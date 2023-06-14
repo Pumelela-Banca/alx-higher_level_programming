@@ -8,8 +8,8 @@ def only_diff_elements(set_1, set_2):
     Returns: new list with all elements not in both sets
     """
     if len(set_1) == 0:
-        return []
+        return set_2
     elif len(set_2) == 0:
-        return []
+        return set_1
     else:
         return list(filter(lambda x: x not in set_1, set_2))
