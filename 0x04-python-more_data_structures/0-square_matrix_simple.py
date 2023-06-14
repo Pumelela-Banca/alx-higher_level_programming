@@ -5,6 +5,8 @@ def square_matrix_simple(matrix=[]):
     square_matrix_simple - square items in a list
     @matrix: array
     """
+    if len(matrix) == 0:
+        return []
     if len(matrix) == 1:
         return [[]]
     else:
