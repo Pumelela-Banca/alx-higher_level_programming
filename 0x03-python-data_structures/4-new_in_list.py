@@ -6,7 +6,7 @@ def new_in_list(my_list, idx, element):
     @idx: index to change in copy
     @element: change to
     """
-    if idx > len(my_list):
+    if idx >= len(my_list):
         return my_list
     if idx < 0 or idx > (len(my_list)):
         return _copy(my_list)
