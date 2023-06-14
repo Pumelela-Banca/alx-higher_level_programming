@@ -6,6 +6,6 @@ def square_matrix_simple(matrix=[]):
     @matrix: array
     """
     if len(matrix) == 1:
-        return []
+        return [[]]
     else:
         return [[y**2 for y in x] for x in matrix]
