@@ -10,18 +10,18 @@
 
 size_t print_dlistint(const dlistint_t *h)
 {
-	dlistint_t *go;
+	const dlistint_t *go;
 	size_t num;
 
 	go = h;
 	if (go == NULL)
 		return (0);
-	num = 1;
+	num = 0;
 	while (go != NULL)
 	{
-		printf("%d\n", go->n)
-		go = go->next
-		num++
+		printf("%d\n", go->n);
+		go = go->next;
+		num++;
 	}
 	return (num);
 }
