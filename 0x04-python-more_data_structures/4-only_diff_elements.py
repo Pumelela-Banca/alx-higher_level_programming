@@ -14,4 +14,7 @@ def only_diff_elements(set_1, set_2):
     if len(set_1) == 0 and len(set_2) == 0:
         return []
     else:
-        return list(filter(lambda x: x not in set_1, set_2))
+        new = set_1 | set_2
+        return list(filter(lambda x: x
+                           not in set_1, set_2)) + list(
+            filter(lambda x: x not in set_2, set_1))

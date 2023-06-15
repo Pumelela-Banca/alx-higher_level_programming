@@ -7,7 +7,7 @@ def square_matrix_simple(matrix=[]):
     """
     if len(matrix) == 0:
         return []
-    if len(matrix) == 1:
+    if len(matrix) == 1 and matrix[0] is []:
         return [[]]
     else:
         return [[y**2 for y in x] for x in matrix]
