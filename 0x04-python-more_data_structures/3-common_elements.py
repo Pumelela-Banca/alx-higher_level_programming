@@ -7,8 +7,8 @@ def common_elements(set_1, set_2):
     @set_1: 1
     """
     if len(set_1) == 0:
-        return []
+        return {}
     elif len(set_2) == 0:
-        return []
+        return {}
     else:
         return list(filter(lambda x: x in set_1, set_2))
