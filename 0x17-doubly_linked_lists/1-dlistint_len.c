@@ -10,7 +10,7 @@
 
 size_t dlistint_len(const dlistint_t *h)
 {
-	const dlistint_t cou;
+	const dlistint_t *cou;
 	size_t len;
 
 	cou = h;
