@@ -8,6 +8,4 @@ def multiply_list_map(my_list=[], number=0):
     """
     if len(my_list) == 0:
         return []
-    elif len(my_list) == 1:
-        return list(map(lambda x: x * number, my_list))
     return list(map(lambda x: x * number, my_list))
