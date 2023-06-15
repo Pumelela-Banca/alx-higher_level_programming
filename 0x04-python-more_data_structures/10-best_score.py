@@ -14,7 +14,7 @@ def best_score(a_dictionary):
         start = a_dictionary[list(a_dictionary.keys())[0]]
         key = ''
         for x in list(a_dictionary.keys()):
-            if  a_dictionary[x] >= start:
+            if a_dictionary[x] >= start:
                 start = a_dictionary[x]
                 key = x
     return key
