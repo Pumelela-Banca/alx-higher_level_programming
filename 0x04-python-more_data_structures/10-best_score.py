@@ -6,7 +6,7 @@ def best_score(a_dictionary):
     @a_dictionary: data
     Return: key
     """
-    if a_dictionary is None:
+    if a_dictionary is None or not a_dictionary:
         return None
     elif len(list(a_dictionary.keys())) == 1:
         return list(a_dictionary.keys())[0]
