@@ -20,26 +20,21 @@ def roman_to_int(roman_string):
 
     if roman_string in names.keys():
         return names[roman_string]
-
-    cp = '' + roman_string
-    for x in roman_string:
-        if x not in names.keys():
-            return 0
-
-        sum_all += names[x]
+    for x in range(0, len(roman_string)):
+        if x != (len(roman_string) -
+                 1) and names[roman_string[x]
+                              ] < names[roman_string[x + 1]]:
+            sum_all += -1 * names[roman_string[x]]
+        elif x != (len(roman_string) -
+                   1) and (x == "I" and roman_string[
+                       x + 1] == "V"):
+            sum_all += 4
+            break
+        elif x != (len(roman_string) -
+                   1) and (x == "I" and roman_string[
+                       x + 1] == "X"):
+            sum_all += 9
+            break
+        else:
+            sum_all += names[roman_string[x]]
     return sum_all
-
-roman_number = "XCIX"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
-
-roman_number = "VII"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
-
-roman_number = "IX"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
-
-roman_number = "LXXXVII"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
-
-roman_number = "DCCVII"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
