@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+
 
 def roman_to_int(roman_string):
     """
@@ -21,8 +21,25 @@ def roman_to_int(roman_string):
     if roman_string in names.keys():
         return names[roman_string]
 
+    cp = '' + roman_string
     for x in roman_string:
         if x not in names.keys():
             return 0
+
         sum_all += names[x]
     return sum_all
+
+roman_number = "XCIX"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "VII"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "IX"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "LXXXVII"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "DCCVII"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))

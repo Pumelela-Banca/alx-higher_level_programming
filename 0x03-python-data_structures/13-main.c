@@ -3,35 +3,33 @@
 #include "lists.h"
 
 /**
- * main - check the code for
+ * main - create long even numbered list not palindrome and check
  *
  * Return: Always 0.
  */
 int main(void)
 {
-    listint_t *head;
+	listint_t *head;
+	listint_t *current;
+	int i;
 
-    head = NULL;
-    
-    add_nodeint_end(&head, 1);
-    add_nodeint_end(&head, 17);
-    add_nodeint_end(&head, 972);
-    add_nodeint_end(&head, 50);
-    add_nodeint_end(&head, 14);
-    add_nodeint_end(&head, 82);
-    add_nodeint_end(&head, 98);
-    add_nodeint_end(&head, 50);
-    add_nodeint_end(&head, 972);
-    add_nodeint_end(&head, 17);
-    add_nodeint_end(&head, 1);
-    print_listint(head);
+	head = NULL;
+	for (i = 0; i < 1001; i++)
+		add_nodeint_end(&head, i);
+	for (i = 1000; i >= 0; i--)
+		add_nodeint_end(&head, i);
 
-    if (is_palindrome(&head) == 1)
-        printf("Linked list is a palindrome\n");
-    else
-        printf("Linked list is not a palindrome\n");
+	current = head;
+	for (i = 0; i < 727; i++)
+		current = current->next;
+	current->n = -98;
 
-    free_listint(head);
+	if (is_palindrome(&head) == 1)
+		printf("Linked list is a palindrome\n");
+	else
+		printf("Linked list is not a palindrome\n");
 
-    return (0);
+	free_listint(head);
+
+	return (0);
 }
