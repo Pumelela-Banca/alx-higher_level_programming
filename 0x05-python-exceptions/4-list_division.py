@@ -20,7 +20,7 @@ def list_division(my_list_1, my_list_2, list_length):
         except ZeroDivisionError:
             new[x] = 0
             print("division by 0")
-            contnue
+            continue
         except IndexError:
             new[x] = 0
             print("out of range")
