@@ -9,7 +9,7 @@ def list_division(my_list_1, my_list_2, list_length):
     Return: new list
     """
     new = [0] * list_length
-    no = 0.0
+    no = 0
     for x in range(0, list_length):
         try:
             no = my_list_1[x] / my_list_2[x]
