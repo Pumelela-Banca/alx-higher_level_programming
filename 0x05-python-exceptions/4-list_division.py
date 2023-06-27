@@ -13,7 +13,8 @@ def list_division(my_list_1, my_list_2, list_length):
     for x in range(0, list_length):
         try:
             no = my_list_1[x] / my_list_2[x]
-        except TypeError: 
+            new[x] = no
+        except TypeError:
             new[x] = 0
             print("wrong type")
             continue
@@ -26,5 +27,5 @@ def list_division(my_list_1, my_list_2, list_length):
             print("out of range")
             continue
         finally:
-            new[x] = no
+            pass
     return new
