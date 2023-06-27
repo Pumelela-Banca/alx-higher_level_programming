@@ -7,7 +7,7 @@ def safe_print_integer(value):
     @Return: True for integer and false for other
     """
     try:
-        print("{:d}".format())
+        print("{:d}".format(value))
         return True
     except IndexError:
         return False
