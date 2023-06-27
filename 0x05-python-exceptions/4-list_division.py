@@ -16,12 +16,15 @@ def list_division(my_list_1, my_list_2, list_length):
         except TypeError: 
             new[x] = 0
             print("wrong type")
+            continue
         except ZeroDivisionError:
             new[x] = 0
             print("division by 0")
+            contnue
         except IndexError:
             new[x] = 0
             print("out of range")
-        else:
+            continue
+        finally:
             new[x] = no
     return new
