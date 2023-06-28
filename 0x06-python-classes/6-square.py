@@ -4,6 +4,7 @@
 This is a class
 """
 
+
 class Square:
     """
     defines a square
@@ -32,6 +33,6 @@ class Square:
             return self.size
         if not isinstance(size, int):
             raise TypeError('size must be an integer')
-        if size < 0:
+        if value < 0:
             raise ValueError("size must be >= 0")
         self.size = value
