@@ -1,0 +1,39 @@
+import text_indentation
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+normal case
+>>> text_indentation("Hi? Say me name: Kitty.")
+Hi
+Say me name
+Kitty
+
+case of empty string
+>>> text_indentation("")
+
+case with no special characters
+>>> text_indentation("Hey what are we, friends foe's or what")
+
+
+case of just special characters and spaces
+>>> text_indentation(":.?  ? . :")
+:
+.
+?
+?
+.
+:
+
+case of special at start
+>>> text_indentation(": Hi jeff. Bye Jeff?")
+:
+Hi jeff.
+Bye Jeff?
+
+case with multiple spaces
+>>> text_indentation(":  Hi    jeff. Bye   Jeff?")
+:
+Hi jeff.
+Bye Jeff?
+
+case with non-string input
+>>> text_indentation([1, 2, 3])
