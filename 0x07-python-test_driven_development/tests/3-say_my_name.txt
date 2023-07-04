@@ -11,7 +11,21 @@ My name is Jane
 
 test numbers
 >>> say_my_name(2, "Smith")
-
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/doctest.py", line 1336, in __run
+    exec(compile(example.source, filename, "single",
+  File "<doctest 3-say_my_name.txt[3]>", line 1, in <module>
+    say_my_name(2, "Smith")
+  File "/alx-higher_level_programming/0x07-python-test_driven_development/3-say_my_name.py", line 14, in say_my_name
+    raise TypeError("first_name must be a string")
+TypeError: first_name must be a string
 
 >>> say_my_name("Gon", 3)
-
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/doctest.py", line 1336, in __run
+    exec(compile(example.source, filename, "single",
+  File "<doctest 3-say_my_name.txt[3]>", line 1, in <module>
+    say_my_name(2, "Smith")
+  File "/alx-higher_level_programming/0x07-python-test_driven_development/3-say_my_name.py", line 14, in say_my_name
+    raise TypeError("first_name must be a string")
+TypeError: first_name must be a string
