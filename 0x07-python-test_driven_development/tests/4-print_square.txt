@@ -1,0 +1,19 @@
+import say_my_name
+>>> print_square = __import__('4-print_square').print_square
+
+test normal case
+>>> print_square(4)
+####
+####
+####
+####
+
+test zero
+>>> print_square(0)
+
+test negative
+>>> print_square(-10)
+size must be >= 0
+
+test string
+>>>

@@ -9,7 +9,6 @@ test empty last name
 >>> say_my_name("Jane")
 My name is Jane
 
-
 test numbers
 >>> say_my_name(2, "Smith")
 
