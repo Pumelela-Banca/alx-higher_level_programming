@@ -80,7 +80,7 @@ class Rectangle:
         if self._Rectangle__height == 0 or self._Rectangle__width == 0:
             return ""
         size = ''
-        for ox in range(1, self._Rectangle__height):
+        for ox in range(0, self._Rectangle__height):
             size += "#" * self._Rectangle__width
             if ox == self._Rectangle__height - 1:
                 break
