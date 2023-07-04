@@ -1,0 +1,35 @@
+>>> add_integer = __import__("0-add_integer").add_integer
+
+Test for real values
+>>> add_integer(10, 30)
+40
+
+Test two floats
+>>> add_integer(10.34, 66)
+76
+
+Test negatives
+>>> add_integer(-1, -3)
+-4
+
+Test zeros
+>>> add_integer(0, 0)
+0
+
+Test a = 'string'
+>>> add_integer("Hi ross")
+Traceback (most recent call last):
+  File "C:\Users\DELL 3550\AppData\Roaming\JetBrains\PyCharmCE2023.1\scratches\scratch.py", line 23, in <module>
+    add_integer(1, "Hi ross")
+  File "C:\Users\DELL 3550\AppData\Roaming\JetBrains\PyCharmCE2023.1\scratches\scratch.py", line 18, in add_integer
+    raise TypeError("a must be an integer")
+TypeError: a must be an integer
+
+Test b = 'string'
+>>> add_integer(1, "Hi ross")
+Traceback (most recent call last):
+  File "C:\Users\DELL 3550\AppData\Roaming\JetBrains\PyCharmCE2023.1\scratches\scratch.py", line 23, in <module>
+    add_integer(1, "Hi ross")
+  File "C:\Users\DELL 3550\AppData\Roaming\JetBrains\PyCharmCE2023.1\scratches\scratch.py", line 18, in add_integer
+    raise TypeError("a must be an integer")
+TypeError: a must be an integer
