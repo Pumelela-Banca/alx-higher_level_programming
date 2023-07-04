@@ -68,4 +68,6 @@ class Rectangle:
         perimeter of rectangle
         :return: perimeter
         """
+        if self._Rectangle__height == 0 or self._Rectangle__width == 0:
+            return 0
         return 2 * (self._Rectangle__height + self._Rectangle__width)
