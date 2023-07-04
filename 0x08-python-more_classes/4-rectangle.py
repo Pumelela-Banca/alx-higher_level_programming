@@ -90,4 +90,4 @@ class Rectangle:
         :return: new string
         """
         return str(self.__class__.__name__) + "({}, {})".format(
-            self._Rectangle__height, self._Rectangle__width)
+            self._Rectangle__width, self._Rectangle__height)
