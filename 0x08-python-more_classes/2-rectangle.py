@@ -56,6 +56,19 @@ class Rectangle:
         else:
             self.__dict__[key] = value
 
+    def __getattr__(self, item):
+        """
+        handles attribute getting
+        :param item: attribute
+        :return: value of attribute
+        """
+        if item == "width":
+            return self.__dict__["_Rectangle__width"]
+        elif item == "height":
+            return self.__dict__["_Rectangle__height"]
+        else:
+            return self.__dict__[item]
+
     def area(self):
         """
         area of rectangle
@@ -71,3 +84,4 @@ class Rectangle:
         if self._Rectangle__height == 0 or self._Rectangle__width == 0:
             return 0
         return 2 * (self._Rectangle__height + self._Rectangle__width)
+    
