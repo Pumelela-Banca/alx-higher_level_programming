@@ -32,7 +32,7 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self._Rectangle__height = height
         self._Rectangle__width = width
-        self.print_symbol = Rectangle.print_symbol = "#"
+        self.print_symbol = Rectangle.print_symbol
 
     @staticmethod
     def setup(name, value):
