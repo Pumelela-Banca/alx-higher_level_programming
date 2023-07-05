@@ -138,3 +138,16 @@ class Rectangle:
         :return: new instance
         """
         return Rectangle(width=size, height=size)
+
+    def __getattr__(self, item):
+        """
+        handles attribute getting
+        :param item: attribute
+        :return: value of attribute
+        """
+        if item == "width":
+            return self.__dict__["_Rectangle__width"]
+        elif item == "height":
+            return self.__dict__["_Rectangle__height"]
+        else:
+            return self.__dict__[item]

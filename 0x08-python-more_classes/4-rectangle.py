@@ -93,4 +93,17 @@ class Rectangle:
         :return: new string
         """
         return str(self.__class__.__name__) + "({}, {})".format(
-            self._Rectangle__width, self._Rectangle__height)
+                self._Rectangle__width, self._Rectangle__height)
+
+        def __getattr__(self, item):
+        """
+        handles attribute getting
+        :param item: attribute
+        :return: value of attribute
+        """
+        if item == "width":
+            return self.__dict__["_Rectangle__width"]
+        elif item == "height":
+            return self.__dict__["_Rectangle__height"]
+        else:
+            return self.__dict__[item]

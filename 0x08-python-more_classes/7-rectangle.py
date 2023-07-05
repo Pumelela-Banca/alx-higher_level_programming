@@ -110,3 +110,16 @@ class Rectangle:
         """
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
+
+    def __getattr__(self, item):
+        """
+        handles attribute getting
+        :param item: attribute
+        :return: value of attribute
+        """
+        if item == "width":
+            return self.__dict__["_Rectangle__width"]
+        elif item == "height":
+            return self.__dict__["_Rectangle__height"]
+        else:
+            return self.__dict__[item]
