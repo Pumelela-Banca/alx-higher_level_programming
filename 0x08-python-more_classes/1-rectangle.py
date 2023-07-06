@@ -12,7 +12,7 @@ class Rectangle:
     Class defining rectangle with height and width
     """
 
-    def __init__(self, width, height):
+    def __init__(self, width=0, height=0):
         """
         Initializer of instances
         :param width: width of rectangle
