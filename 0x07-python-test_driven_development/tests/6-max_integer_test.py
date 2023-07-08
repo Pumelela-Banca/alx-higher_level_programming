@@ -42,14 +42,14 @@ class TestMaxInteger(unittest.TestCase):
     def test_with_zero(self):
         """list has zero"""
         self.assertEquals(max_integer(
-            [-1, -2, -14, -16, -4, 0]), -16)
+            [-1, -2, -14, -16, -4, 0]), 0)
 
     def test_max_start(self):
-        """maxt at start"""
+        """max at start"""
         self.assertEquals(max_integer([21, 2, 4, -16, -1000]), 21)
 
     def test_max_middle(self):
-        """maxt in middle"""
+        """max in middle"""
         self.assertEquals(max_integer([-1, 2, 4, -16, -1000]), 4)
 
 
