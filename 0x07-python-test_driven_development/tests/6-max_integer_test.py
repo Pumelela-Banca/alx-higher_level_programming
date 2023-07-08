@@ -44,6 +44,14 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEquals(max_integer(
             [-1, -2, -14, -16, -4, 0]), -16)
 
+    def test_max_start(self):
+        """maxt at start"""
+        self.assertEquals(max_integer([21, 2, 4, -16, -1000]), 21)
+
+    def test_max_middle(self):
+        """maxt in middle"""
+        self.assertEquals(max_integer([-1, 2, 4, -16, -1000]), 4)
+
 
 if __name__ == '__main__':
     unittest.main()
