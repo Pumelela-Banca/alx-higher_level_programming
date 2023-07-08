@@ -43,3 +43,7 @@ class TestMaxInteger(unittest.TestCase):
         """list has zero"""
         self.assertEquals(max_integer(
             [-1, -2, -14, -16, -4, 0]), -16)
+
+
+if __name__ == '__main__':
+    unittest.main()
