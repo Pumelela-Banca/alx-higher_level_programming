@@ -10,10 +10,8 @@ def lookup(obj):
     :param obj: class object
     :return: list with all methods
     """
-    try:
-        issubclass(object, obj)
-    except TypeError:
-        raise TypeError("Not class")
+    if type(obj) != type:
+        raise TypeError("obj must be class type")
     all_meth = []
     for x in obj.__dict__.keys():
         all_meth.append(x)
