@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 
 """
-the object is an instance of, or if the
-object is an instance of a class that inherited
-from the class.
+module with function that searches type of class
 """
 
 
