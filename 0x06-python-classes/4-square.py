@@ -51,3 +51,4 @@ class Square:
             self.__dict__[key] = value
         else:
             self.__dict__[key] = value
+

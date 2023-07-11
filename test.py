@@ -1,4 +1,7 @@
-import sys
+class User:
+    id = 1
 
-
-print(len((0,)))
+u = User()
+u.id = 89
+User.id = 98
+print(User.id)
