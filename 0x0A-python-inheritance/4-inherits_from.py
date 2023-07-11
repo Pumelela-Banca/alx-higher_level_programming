@@ -27,8 +27,6 @@ def go_deep(look, hey):
     collects all super classes in a list and returns
     it
     """
-
-    print(look.__base__, hey)
     if look.__base__ is None:
         return False
     else:
