@@ -35,4 +35,7 @@ Traceback (most recent call last):
     print(sorted(ls))
 TypeError: '<' not supported between instances of 'str' and 'int'
 
-
+test empty
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
