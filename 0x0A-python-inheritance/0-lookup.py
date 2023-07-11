@@ -12,7 +12,5 @@ def lookup(obj):
     """
     if type(obj) != type:
         raise TypeError("obj must be class type")
-    all_meth = []
-    for x in obj.__dict__.keys():
-        all_meth.append(x)
+    all_meth = dir(obj)
     return all_meth
