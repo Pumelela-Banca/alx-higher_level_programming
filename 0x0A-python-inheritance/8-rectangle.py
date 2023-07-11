@@ -2,12 +2,14 @@
 
 """
 module with class that inherits from BaseGeometry
+
 """
 
 
 class Rectangle(BaseGeometry):
     """
     class inherits from BaseGeometry methods and adds __init__
+    
     """
     def __init__(self, width, height):
         __height = height
