@@ -39,3 +39,13 @@ test empty
 >>> my_list = MyList()
 >>> my_list.print_sorted()
 []
+
+check str return
+>>> my_list = MyList()
+>>> my_list.append('1')
+>>> my_list.append('b')
+>>> my_list.append('16')
+>>> my_list.append('c')
+>>> my_list.append('22')
+>>> str(my_list.print_sorted())
+['1', '16', '22', 'b', 'c']
