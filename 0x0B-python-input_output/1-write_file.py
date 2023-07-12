@@ -19,5 +19,5 @@ def write_file(filename="", text=""):
     with open(filename, "r") as file:
         lines = file.readlines()
         for x in range(0, len(lines)):
-            size += len(x)
+            size += len(lines[x])
     return size
