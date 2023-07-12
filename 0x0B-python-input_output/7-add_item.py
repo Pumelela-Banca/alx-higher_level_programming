@@ -1,19 +1,15 @@
 #!/usr/bin/python3
 
 """
-script to load and add json objects to a file
+script to create python objects to be saved in file add_item.json
 """
+
 import json
 from sys import argv
 
 
 save_to_json_file = __import__('5-save_to_json_file.py').save_o_json_file
 load_from_json_file = __import__('6-load_from_json_file.py').load_from_json_file
-
-
-"""
-script to create python objects to be saved in file add_item.json 
-"""
 
 
 if len(argv) == 1:
