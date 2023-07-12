@@ -16,10 +16,13 @@ if len(argv) == 1:
     with open("add_item.json", "w+") as f:
         data = f.readlines()
         if not data:
-            json.dump([], f)
+            save_to_json_file([], "add_item.json")
 else:
     with open("add_item.json", "w+") as f:
-        data = json.load(f)
-        for x in argv[1:]:
-            data.append(x)
-        json.dump(data, f)
+        data = f.readline()
+        if not data:
+            json.dump([argv[1]], f)
+        elif data == "[]":
+            for x in argv[1:]:
+                data.append(x)
+            json.dump(data, f)
