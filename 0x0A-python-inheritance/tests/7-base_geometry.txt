@@ -1,7 +1,6 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
-
 >>> bg.integer_validator("width", 89)
-
 >>> bg.integer_validator("my_int", 12)
 
 test value of string
@@ -29,4 +28,81 @@ Traceback (most recent call last):
     bg.integer_validator("distance", -4)
   File "C:\Users\DELL 3550\AppData\Roaming\JetBrains\PyCharmCE2023.1\scratches\tester.2.py", line 26, in integer_validator
     raise TypeError("{} must be greater than 0".format(name))
-TypeError: distance must be greater than 0
+TypeError: age must be greater than 0
+
+test use of area()
+>>> bg.area()
+Traceback (most recent call last):
+  File "C:\Users\DELL 3550\Documents\C programming\Arrays_and_pointers\alx-higher_level_programming\0x0A-python-inheritance\7-base_geometry.py", line 34, in <module>
+    print(bg.area())
+  File "C:\Users\DELL 3550\Documents\C programming\Arrays_and_pointers\alx-higher_level_programming\0x0A-python-inheritance\7-base_geometry.py", line 17, in area
+    raise Exception("area() is not implemented")
+Exception: area() is not implemented
+
+test use of integer_validator()
+>>> bg.integer_validator()
+Traceback (most recent call last):
+  File "C:\Users\DELL 3550\Documents\C programming\Arrays_and_pointers\alx-higher_level_programming\0x0A-python-inheritance\7-base_geometry.py", line 34, in <module>
+    print(bg.integer_validator())
+TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+test good case
+>>> bg.integer_validator("age", 33)
+None
+
+test one argument
+>>> bg.integer_validator("age")
+Traceback (most recent call last):
+  File "C:\Users\DELL 3550\Documents\C programming\Arrays_and_pointers\alx-higher_level_programming\0x0A-python-inheritance\7-base_geometry.py", line 34, in <module>
+    print(bg.integer_validator("age"))
+TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+
+test positive value
+>>> bg.integer_validator("age", 4)
+None
+
+test with tuple
+>>> bg.integer_validator("age", (10, 13))
+Traceback (most recent call last):
+  File "C:\Users\DELL 3550\Documents\C programming\Arrays_and_pointers\alx-higher_level_programming\0x0A-python-inheritance\7-base_geometry.py", line 34, in <module>
+    print(bg.integer_validator("age", (10, 13)))
+  File "C:\Users\DELL 3550\Documents\C programming\Arrays_and_pointers\alx-higher_level_programming\0x0A-python-inheritance\7-base_geometry.py", line 24, in integer_validator
+    raise TypeError("{} must be an integer".format(name))
+TypeError: age must be an integer
+
+test with list
+>>> bg.integer_validator("age", [10, 20, 2])
+Traceback (most recent call last):
+  File "C:\Users\DELL 3550\Documents\C programming\Arrays_and_pointers\alx-higher_level_programming\0x0A-python-inheritance\7-base_geometry.py", line 34, in <module>
+    print(bg.integer_validator("age", [1, 'c']))
+  File "C:\Users\DELL 3550\Documents\C programming\Arrays_and_pointers\alx-higher_level_programming\0x0A-python-inheritance\7-base_geometry.py", line 24, in integer_validator
+    raise TypeError("{} must be an integer".format(name))
+TypeError: age must be an integer
+
+test with bool
+>>> bg.integer_validator("age", True)
+Traceback (most recent call last):
+  File "C:\Users\DELL 3550\Documents\C programming\Arrays_and_pointers\alx-higher_level_programming\0x0A-python-inheritance\7-base_geometry.py", line 34, in <module>
+    print(bg.integer_validator("age", [1, 'c']))
+  File "C:\Users\DELL 3550\Documents\C programming\Arrays_and_pointers\alx-higher_level_programming\0x0A-python-inheritance\7-base_geometry.py", line 24, in integer_validator
+    raise TypeError("{} must be an integer".format(name))
+TypeError: age must be an integer
+
+test with set
+>>> bg.integer_validator("age", {10, 20, 2})
+Traceback (most recent call last):
+  File "C:\Users\DELL 3550\Documents\C programming\Arrays_and_pointers\alx-higher_level_programming\0x0A-python-inheritance\7-base_geometry.py", line 34, in <module>
+    print(bg.integer_validator("age", [1, 'c']))
+  File "C:\Users\DELL 3550\Documents\C programming\Arrays_and_pointers\alx-higher_level_programming\0x0A-python-inheritance\7-base_geometry.py", line 24, in integer_validator
+    raise TypeError("{} must be an integer".format(name))
+TypeError: age must be an integer
+
+test with None
+>>> bg.integer_validator("age", None)
+Traceback (most recent call last):
+  File "C:\Users\DELL 3550\Documents\C programming\Arrays_and_pointers\alx-higher_level_programming\0x0A-python-inheritance\7-base_geometry.py", line 34, in <module>
+    print(bg.integer_validator("age", None))
+  File "C:\Users\DELL 3550\Documents\C programming\Arrays_and_pointers\alx-higher_level_programming\0x0A-python-inheritance\7-base_geometry.py", line 24, in integer_validator
+    raise TypeError("{} must be an integer".format(name))
+TypeError: age must be an integer
+
