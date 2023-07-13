@@ -39,15 +39,6 @@ class Rectangle(BaseGeometry):
         self.integer_validator("'Rectangle'", self._Rectangle__width)
         self.integer_validator("'Rectangle'", self._Rectangle__height)
 
-    def __getattr__(self, item):
-
-        if item == "height":
-            return self.__dict__["_Rectangle__height"]
-        elif item == 'width':
-            return self.__dict__["_Rectangle__width"]
-        else:
-            return self.__dict__[item]
-
     def area(self):
         return self._Rectangle__width * self._Rectangle__height
 
