@@ -39,11 +39,3 @@ class Rectangle(BaseGeometry):
         self.integer_validator("width", self._Rectangle__width)
         self.integer_validator("height", self._Rectangle__height)
 
-    def __getattr__(self, item):
-
-        if item == "height":
-            return self.__dict__["_Rectangle__height"]
-        elif item == 'width':
-            return self.__dict__["_Rectangle__width"]
-        else:
-            return self.__dict__[item]
