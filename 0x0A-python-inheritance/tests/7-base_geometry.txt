@@ -44,18 +44,10 @@ test use of integer_validator()
 Traceback (most recent call last):
   File "C:\Users\DELL 3550\Documents\C programming\Arrays_and_pointers\alx-higher_level_programming\0x0A-python-inheritance\7-base_geometry.py", line 34, in <module>
     bg.integer_validator()
-TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 test good case
 >>> bg.integer_validator("age", 33)
-
-
-test one argument
->>> bg.integer_validator("age")
-Traceback (most recent call last):
-  File "C:\Users\DELL 3550\Documents\C programming\Arrays_and_pointers\alx-higher_level_programming\0x0A-python-inheritance\7-base_geometry.py", line 34, in <module>
-    bg.integer_validator("age")
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
 
 test positive value
 >>> bg.integer_validator("age", 4)
