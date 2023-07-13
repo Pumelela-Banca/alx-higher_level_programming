@@ -36,8 +36,8 @@ class Rectangle(BaseGeometry):
     def __init__(self, width, height):
         self._Rectangle__height = height
         self._Rectangle__width = width
-        self.integer_validator("'Rectangle'", self._Rectangle__width)
-        self.integer_validator("'Rectangle'", self._Rectangle__height)
+        self.integer_validator("width", self._Rectangle__width)
+        self.integer_validator("height", self._Rectangle__height)
 
     def __getattr__(self, item):
 
