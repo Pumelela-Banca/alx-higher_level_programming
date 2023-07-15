@@ -16,7 +16,29 @@ def pascal_triangle(n):
     elif n == 1:
         return [1]
     elif n == 2:
-        return [1,1]
+        return [1, 1]
     else:
-        pass
+        print([1])
+        print([1, 1])
+        pri_list(n)
+
+
+def pri_list(new_l):
+    """
+    prints and returns new list
+    """
+    ll = [1, 1]
+    new = []
+    for x in range(0, new_l - 2):
+        for y in range(0, len(ll) + 2):
+
+            if y == 0 or y == len(ll):
+                new.append(1)
+            elif y == len(ll) + 1:
+                pass
+            else:
+                new.append(ll[y - 1] + ll[y])
+        ll = new
+        print(new)
+        new = []
 
