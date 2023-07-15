@@ -22,4 +22,3 @@ class Student:
             if x in self.__dict__.keys():
                 jj[x] = self.__dict__[x]
         return jj
-
