@@ -10,17 +10,14 @@ def pascal_triangle(n):
     returns a list of lists of integers
     representing the Pascal’s triangle of n
     """
-
     if n <= 0:
-        return []
+        return [[]]
     elif n == 1:
-        return [1]
+        return [[1]]
     elif n == 2:
-        return [1, 1]
+        return [[1, 1]]
     else:
-        print([1])
-        print([1, 1])
-        pri_list(n)
+        return pri_list(n)
 
 
 def pri_list(new_l):
@@ -29,9 +26,9 @@ def pri_list(new_l):
     """
     ll = [1, 1]
     new = []
+    all_l = [[1], [1, 1]]
     for x in range(0, new_l - 2):
         for y in range(0, len(ll) + 2):
-
             if y == 0 or y == len(ll):
                 new.append(1)
             elif y == len(ll) + 1:
@@ -39,6 +36,6 @@ def pri_list(new_l):
             else:
                 new.append(ll[y - 1] + ll[y])
         ll = new
-        print(new)
+        all_l.append(new)
         new = []
-
+    return all_l
