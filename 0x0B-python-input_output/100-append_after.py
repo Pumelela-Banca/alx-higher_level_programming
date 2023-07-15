@@ -17,8 +17,10 @@ def append_after(filename="", search_string="", new_string=""):
         for ln in lines:
             new.append(ln)
             if search_string in ln:
-                new.append([new_string])
+                new.append(new_string)
 
+    if new is None:
+        return
     with open(filename, 'w') as f:
         for x in new:
-            f.writelines(x[0])
+            f.writelines(x)
