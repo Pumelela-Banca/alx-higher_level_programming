@@ -11,7 +11,7 @@ def pascal_triangle(n):
     representing the Pascal’s triangle of n
     """
     if n <= 0:
-        return [[]]
+        return []
     elif n == 1:
         return [[1]]
     elif n == 2:
