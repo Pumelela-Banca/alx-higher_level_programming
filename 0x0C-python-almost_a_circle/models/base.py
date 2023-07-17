@@ -41,3 +41,16 @@ class Base:
                     hold = cls.to_dictionary(x)
                     dict_info.append(hold)
                 f.write(Base.to_json_string(dict_info))
+
+    @staticmethod
+    def from_json_string(json_string):
+        if json_string is None:
+            return []
+        else:
+            return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        fake = cls(3, 5, 1)
+        
+        cls.update(fake)
