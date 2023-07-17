@@ -84,11 +84,12 @@ class Rectangle(Base):
     def display(self):
         size = "#" * self.__width
         if self.__x == 0:
-            spc = ""
+            for _ in range(0, self.__height):
+                print(size)
         else:
             spc = " " * self.__x
-        for _ in range(0, self.__height):
-            print(spc, size)
+            for _ in range(0, self.__height):
+                print(spc, size)
 
     def __str__(self):
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
