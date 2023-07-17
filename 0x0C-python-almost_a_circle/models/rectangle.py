@@ -116,3 +116,7 @@ class Rectangle(Base):
         else:
             for x in kwargs:
                 self.alt_set(x, kwargs[x])
+
+    def to_dictionary(self):
+        return dict(id=self.id, width=self.width, height=self.height,
+                    x=self.__x, y=self.__y)
