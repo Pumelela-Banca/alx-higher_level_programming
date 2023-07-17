@@ -24,35 +24,42 @@ class Rectangle(Base):
         self.__y = y
         self.__x = x
 
-    def __getattr__(self, item):
 
-        if item == "width":
-            return self.__dict__["__width"]
-        elif item == "height":
-            return self.__dict__["__height"]
-        elif item == "y":
-            return self.__dict__["__y"]
-        elif item == "x":
-            return self.__dict__["__x"]
-        else:
-            return self.__dict__[item]
+    @property
+    def width(self):
+        return self.__width
 
-    def __setattr__(self, key, value):
+    @property
+    def height(self):
+        return self.__height
 
-        if key == "width":
-            self.validate(value, "width")
-            self.__dict__["__width"] = value
-        elif key == "height":
-            self.validate(value, "height")
-            self.__dict__["__height"] = value
-        elif key == "y":
-            self.validate(value, "y")
-            self.__dict__["__y"] = value
-        elif key == "x":
-            self.validate(value, "x")
-            self.__dict__["__x"] = value
-        else:
-            self.__dict__[key] = value
+    @property
+    def y(self):
+        return self.__y
+
+    @property
+    def x(self):
+        return self.__x
+
+    @height.setter
+    def height(self, value):
+        self.validate(value, "height")
+        self.__height = value
+
+    @width.setter
+    def width(self, value):
+        self.validate(value, "width")
+        self.__width = value
+
+    @x.setter
+    def x(self, value):
+        self.validate(value, "x")
+        self.__x = value
+
+    @y.setter
+    def y(self, value):
+        self.validate(value, "y")
+        self.__y = value
 
     def alt_set(self, key, value):
         if key == "width":
