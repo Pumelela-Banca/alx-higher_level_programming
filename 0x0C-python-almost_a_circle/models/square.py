@@ -12,10 +12,11 @@ class Square(Rectangle):
     a square class derived from Rectangle with __str__ method changed
     """
     def __init__(self, size, x=0, y=0, id=None):
-        Rectangle.__init__(self, size, size, x=x, y=y, id=id)
+        super().__init__(size, size, x=x, y=y, id=id)
+        self.size = size
 
     def __str__(self):
-        return f"[Square] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        return f"[Square] ({self.id}) {self.__x}/{self.__y} - {self.size}"
 
 
 if __name__ == "__main__":

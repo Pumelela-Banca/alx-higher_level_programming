@@ -13,7 +13,7 @@ class Rectangle(Base):
     class inherits from Base and adds new attributes
     """
     def __init__(self, width, height, x=0, y=0, id=None):
-        Base.__init__(self, id=id)
+        super().__init__(id=id)
         self.validate(height, "height")
         self.validate(width, "width")
         self.validate(y, "y")
