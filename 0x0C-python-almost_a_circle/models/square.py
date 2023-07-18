@@ -5,7 +5,7 @@ a class that describes all attributes of a square class
 taking attributes from Rectangle
 """
 
-from models.rectangle import Rectangle
+from .rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -13,16 +13,19 @@ class Square(Rectangle):
     a square class derived from Rectangle with __str__ method changed
     """
     def __init__(self, size, x=0, y=0, id=None):
+        """Square init using size"""
         Rectangle.__init__(self,size, size, x=x, y=y, id=id)
         self.__x = x
         self.__y = y
         self.__size = size
 
     def __str__(self):
+        """return details"""
         return f"[Square] ({self.id}) {self.__x}/{self.__y}" + \
             f"- {self.__size}"
 
     def update(self, *args, **kwargs):
+        """update"""
         if args and args is not None:
             try:
                 self.id = args[0]
