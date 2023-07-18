@@ -5,7 +5,7 @@ module with a class with attributes width, y, height and x and inherits
 from base
 """
 
-from .base import Base
+from base import Base
 
 
 class Rectangle(Base):
