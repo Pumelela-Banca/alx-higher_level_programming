@@ -121,7 +121,7 @@ class Rectangle(Base):
     def __str__(self):
         """default printer"""
         return f"[Rectangle] ({self.id}) {self.__x}" + \
-                f"/{self.__y} - {self.__width}/{self.__height}"
+            f"/{self.__y} - {self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
         """
