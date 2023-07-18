@@ -39,6 +39,7 @@ class Square(Rectangle):
                 self.alt_set(x, kwargs[x])
 
     def alt_set(self, key, value):
+        """validator used in setters"""
         if key == "size":
             self.validate(value, "width")
             self.__size = value
@@ -51,13 +52,16 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """unique property for square"""
         return self.__size
 
     @size.setter
     def size(self, value):
+        """sets size"""
         self.validate(value, "width")
         self.__size = value
 
     def to_dictionary(self):
+        """dictionary representation of square"""
         return dict(id=self.id, size=self.__size,
                     x=self.__x, y=self.__y)

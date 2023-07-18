@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """
-module contains a base class for all classes with
-attribute id
+module with a class with attributes width, y, height and x and inherits
+from base
 """
+
 from models.base import Base
 
 

@@ -16,6 +16,7 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """Base initializer" with default for id"""
         if id is not None:
             self.id = id
         else:
@@ -24,6 +25,7 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """Turns python type to json string"""
         if list_dictionaries is None:
             return "[]"
         else:
@@ -31,6 +33,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """saves json type to json file"""
         if list_objs is None:
             with open(f"{cls.__name__}.json", "w") as f:
                 f.write("[]")
@@ -44,6 +47,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """turns json to python string"""
         if json_string is None:
             return []
         else:
@@ -51,12 +55,14 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """class method for creating new instance"""
         fake = cls(**dictionary)
         fake.update()
         return fake
 
     @classmethod
     def load_from_file(cls):
+        """loads json data from file"""
         with open(f"{cls.__name__}.json", "r") as f:
             try:
                 ss = f.readline()
