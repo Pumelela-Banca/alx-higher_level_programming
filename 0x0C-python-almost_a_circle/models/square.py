@@ -25,7 +25,7 @@ class Square(Rectangle):
             f"- {self.__size}"
 
     def update(self, *args, **kwargs):
-        """update"""
+        """updates all square attributes"""
         if args and args is not None:
             try:
                 self.id = args[0]
