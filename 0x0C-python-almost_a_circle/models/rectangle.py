@@ -5,7 +5,6 @@ a module with attributes width, y, height and x and inherits
 from base
 """
 
-
 from base import Base
 
 
