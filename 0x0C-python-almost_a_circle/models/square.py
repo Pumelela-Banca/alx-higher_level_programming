@@ -5,7 +5,7 @@ module with class that describes all attributes of a square class
 taking attributes from Rectangle
 """
 
-from rectangle import Rectangle
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
