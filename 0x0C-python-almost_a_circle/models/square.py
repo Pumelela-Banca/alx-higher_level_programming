@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 module with class that describes all attributes of a square class
 taking attributes from Rectangle

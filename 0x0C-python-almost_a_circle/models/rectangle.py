@@ -1,10 +1,8 @@
 #!/usr/bin/python3
-
 """
 module with a class with attributes width, y, height and x and inherits
 from base
 """
-
 from models.base import Base
 
 
