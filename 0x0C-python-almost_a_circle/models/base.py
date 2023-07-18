@@ -51,6 +51,10 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        fake = cls(3, 5, 1)
-        
-        cls.update(fake)
+        fake = cls(3, 5)
+        cls.update(fake, **dictionary)
+        return fake
+
+    @classmethod
+    def load_from_file(cls):
+        pass
