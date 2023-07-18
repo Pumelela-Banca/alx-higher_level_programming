@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-a class that describes all attributes of a square class
+module with class that describes all attributes of a square class
 taking attributes from Rectangle
 """
 
