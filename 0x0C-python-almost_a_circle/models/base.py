@@ -51,10 +51,19 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        fake = cls(3, 5)
-        cls.update(fake, **dictionary)
+        fake = cls(**dictionary)
+        fake.update()
         return fake
 
     @classmethod
     def load_from_file(cls):
-        pass
+        with open(f"{cls.__name__}.json", "r") as f:
+            try:
+                ss = f.readline()
+                json_str = json.loads(ss)
+
+                for i in json_str:
+                    cls.create(i)
+                return json_str
+            except FileNotFoundError:
+                return []
