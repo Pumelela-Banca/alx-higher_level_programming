@@ -66,10 +66,11 @@ class Base:
         with open(f"{cls.__name__}.json", "r") as f:
             try:
                 ss = f.readline()
+                inst = []
                 json_str = json.loads(ss)
 
                 for i in json_str:
-                    cls.create(i)
+                    inst.append(cls.create(i))
                 return json_str
             except FileNotFoundError:
                 return []
