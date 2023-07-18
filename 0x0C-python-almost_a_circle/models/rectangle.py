@@ -16,6 +16,12 @@ class Rectangle(Base):
         """
         init that adds to Base init, these attributes
         height, width, y and x
+        Attributes:
+            __width: width
+            __height: height
+            __x: x
+            __y: y
+            id: id
         """
         super().__init__(id=id)
         self.validate(height, "height")
