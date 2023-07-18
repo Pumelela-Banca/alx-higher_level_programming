@@ -93,6 +93,7 @@ class Rectangle(Base):
             self.__x = value
 
     def area(self):
+        """calculates and returns area"""
         return self.__width * self.__height
 
     def validate(self, attr, name):
