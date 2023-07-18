@@ -7,7 +7,7 @@ given questions
 
 import unittest
 
-from models import Base
+from test_models.base import Base
 
 
 class TestSquare(unittest.TestCase):

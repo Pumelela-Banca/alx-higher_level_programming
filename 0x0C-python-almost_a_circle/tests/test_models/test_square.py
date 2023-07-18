@@ -6,7 +6,7 @@ Tests for square class and its methods
 
 import unittest
 
-from models import Square
+from test_models.square import Square
 
 
 class TestSquare(unittest.TestCase):

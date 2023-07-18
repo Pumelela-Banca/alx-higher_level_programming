@@ -6,7 +6,7 @@ Tests for rectangle class and its methods
 
 import unittest
 
-from models import Rectangle
+from test_models.rectangle import Rectangle
 
 
 class TestSquare(unittest.TestCase):
