@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-a module with attributes width, y, height and x and inherits
+a module with a class with attributes width, y, height and x and inherits
 from base
 """
 

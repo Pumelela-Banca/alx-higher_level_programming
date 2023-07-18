@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 """
-a class that describes all attributes of a square
+a class that describes all attributes of a square class
+taking attributes from Rectangle
 """
 
 from rectangle import Rectangle
