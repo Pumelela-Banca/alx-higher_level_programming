@@ -18,6 +18,5 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(box.id, 1)
         self.assertEqual(box.height, 4)
         self.assertEqual(box.x, 6)
-        self.assertEqual(box.x, 3)
 
     # Tests exception
