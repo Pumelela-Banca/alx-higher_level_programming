@@ -15,10 +15,13 @@ class TestSquare(unittest.TestCase):
     def test_init(self):
         box = Rectangle(3, 4, 6, 3)
         self.assertEqual(box.width, 3)
-        
+
         self.assertEqual(box.id, 4)
         self.assertEqual(box.height, 4)
         self.assertEqual(box.x, 6)
+
+    def test_to_json(self):
+        pass
 
     # Tests exception
 
