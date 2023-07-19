@@ -22,6 +22,5 @@ class TestSquare(unittest.TestCase):
     # Tests exception
 
 
-
 if __name__ == '__main__':
     unittest.main()
