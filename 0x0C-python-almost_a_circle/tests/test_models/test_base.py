@@ -20,10 +20,10 @@ class TestSquare(unittest.TestCase):
         ints5 = Base()
 
         self.assertEqual(ints1.id, 1)
-        self.assertEqual(ints1.id, 2)
-        self.assertEqual(ints1.id, 10)
-        self.assertEqual(ints1.id, 5)
-        self.assertEqual(ints1.id, 3)
+        self.assertEqual(ints2.id, 2)
+        self.assertEqual(ints3.id, 10)
+        self.assertEqual(ints4.id, 5)
+        self.assertEqual(ints5.id, 3)
 
 
 if __name__ == '__main__':
