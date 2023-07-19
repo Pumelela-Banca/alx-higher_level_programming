@@ -28,7 +28,9 @@ class TestSquare(unittest.TestCase):
     def test_to_json_string(self):
         self.assertEqual(Base.to_json_string(None), "[]")
         self.assertEqual(Base.to_json_string([]), "[]")
+        self.assertEqual(Base.to_json_string("[]"), '"[]"')
         self.assertEqual(Base.to_json_string([{"id": 3}]), '[{"id": 3}]')
+        self.assertEqual(Base.to_json_string('[{"id": 3}]'), '"[{\\"id\\": 3}]"')
 
 
 if __name__ == '__main__':
