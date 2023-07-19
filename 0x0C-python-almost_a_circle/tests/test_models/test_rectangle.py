@@ -20,3 +20,8 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(box.x, 6)
 
     # Tests exception
+
+
+
+if __name__ == '__main__':
+    unittest.main()

@@ -18,3 +18,6 @@ class TestSquare(unittest.TestCase):
 
         r2 = Base(2)
         self.assertEqual(r2.id, 2)
+
+if __name__ == '__main__':
+    unittest.main()
