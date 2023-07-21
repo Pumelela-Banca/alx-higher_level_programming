@@ -88,8 +88,8 @@ class TestSquare(unittest.TestCase):
             Rectangle(1, 0)
         self.assertEqual(str(e.exception), "height must be > 0")
 
-    """test area"""
     def test_area(self):
+        """test area"""
         self.assertEqual(Rectangle(2, 2).area(), 4)
         self.assertEqual(Rectangle(2, 2).area(), 4)
 
@@ -99,7 +99,16 @@ class TestSquare(unittest.TestCase):
         sys.stdout = result
         print(Rectangle(2, 3))
         resu_str = result.getvalue()
-        self.assertEqual(resu_str, "[Rectangle] (17) 0/0 - 2/3\n")
+        self.assertEqual(resu_str, f"[Rectangle] (18) 0/0 - 2/3\n")
+        sys.stdout = result
+
+    def test_display(self):
+        """test display method"""
+        result = StringIO()
+        sys.stdout = result
+        Rectangle(4, 2).display()
+        resu_str = result.getvalue()
+        self.assertEqual(resu_str, "####\n####\n")
         sys.stdout = result
 
 

@@ -62,8 +62,18 @@ class TestSquare(unittest.TestCase):
         sys.stdout = result
         print(Square(2))
         resu_str = result.getvalue()
-        self.assertEqual(resu_str, "[Square] (26) 0/0- 2\n")
+        self.assertEqual(resu_str, "[Square] (28) 0/0- 2\n")
         sys.stdout = result
+
+    def test_display(self):
+        """test display method"""
+        result = StringIO()
+        sys.stdout = result
+        Square(4).display()
+        resu_str = result.getvalue()
+        self.assertEqual(resu_str, "####\n####\n####\n####\n")
+        sys.stdout = result
+
 
 if __name__ == '__main__':
     unittest.main()
