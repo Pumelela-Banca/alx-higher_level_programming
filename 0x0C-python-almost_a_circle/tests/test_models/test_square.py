@@ -84,6 +84,12 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(resu_str, line)
         sys.stdout = result
 
+    def test_to_dict(self):
+        """test to dict return"""
+        rr = Square(1, 3, 4, 5).to_dictionary()
+        self.assertEqual(rr, dict(size=1,
+                    x=3, y=4, id=5))
+
 
 if __name__ == '__main__':
     unittest.main()
