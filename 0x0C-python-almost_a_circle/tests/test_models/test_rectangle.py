@@ -127,6 +127,29 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(rr, dict(width=1, height=2,
                     x=3, y=4, id=5))
 
+    def test_update(self):
+        """tests update"""
+        rr = Rectangle(1, 3, 4, 25, 5)
+        rr.update()
+        vals = rr.to_dictionary()
+        self.assertEqual(vals, dict(width=1, height=3,
+                                    x=4, y=25, id=5))
+        rr.update(33)
+        self.assertEqual(rr.to_dictionary(), dict(width=1, height=3,
+                                                  x=4, y=25, id=33))
+        rr.update(33, 5)
+        self.assertEqual(rr.to_dictionary(), dict(width=5, height=3,
+                                                  x=4, y=25, id=33))
+        rr.update(33, 5, 16)
+        self.assertEqual(rr.to_dictionary(), dict(width=5, height=16,
+                                                  x=4, y=25, id=33))
+        rr.update(33, 5, 16, 2)
+        self.assertEqual(rr.to_dictionary(), dict(width=5, height=16,
+                                                  x=4, y=25, id=33))
+        rr.update(33, 5, 16, 2, 4)
+        self.assertEqual(rr.to_dictionary(), dict(width=5, height=16,
+                                                  x=2, y=4, id=33))
+
 
 if __name__ == '__main__':
     unittest.main()

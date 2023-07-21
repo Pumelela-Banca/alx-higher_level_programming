@@ -90,6 +90,29 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(rr, dict(size=1,
                     x=3, y=4, id=5))
 
+    def test_update(self):
+        """tests update"""
+        rr = Square(1, 3, 4, 5)
+        rr.update()
+        vals = rr.to_dictionary()
+        self.assertEqual(vals, dict(size=1,
+                                    x=3, y=4, id=5))
+        rr.update(33)
+        self.assertEqual(rr.to_dictionary(), dict(size=1,
+                                                  x=3, y=4, id=33))
+        rr.update(33, 5)
+        self.assertEqual(rr.to_dictionary(), dict(size=5,
+                                                  x=3, y=4, id=33))
+        rr.update(33, 5, 16)
+        self.assertEqual(rr.to_dictionary(), dict(size=5,
+                                                  x=3, y=16, id=33))
+        rr.update(33, 5, 16, 2)
+        self.assertEqual(rr.to_dictionary(), dict(size=5,
+                                                  x=2, y=16, id=33))
+        rr.update(33, 5, 16, 2, 4)
+        self.assertEqual(rr.to_dictionary(), dict(size=5,
+                                                  x=2, y=16, id=33))
+
 
 if __name__ == '__main__':
     unittest.main()
