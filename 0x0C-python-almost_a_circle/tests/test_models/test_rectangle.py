@@ -4,7 +4,9 @@
 Tests for rectangle class and its methods
 """
 
+import sys
 import unittest
+from io import StringIO
 
 from models.rectangle import Rectangle
 
@@ -89,8 +91,16 @@ class TestSquare(unittest.TestCase):
     """test area"""
     def test_area(self):
         self.assertEqual(Rectangle(2, 2).area(), 4)
-
         self.assertEqual(Rectangle(2, 2).area(), 4)
+
+    def test_print_res(self):
+        """test print results"""
+        result = StringIO()
+        sys.stdout = result
+        print(Rectangle(2, 3))
+        resu_str = result.getvalue()
+        self.assertEqual(resu_str, "[Rectangle] (17) 0/0 - 2/3\n")
+        sys.stdout = result
 
 
 if __name__ == '__main__':
