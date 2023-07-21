@@ -42,11 +42,20 @@ class TestSquare(unittest.TestCase):
 
     """test errors"""
     def test_errors(self):
-        with self.assertRaises(TypeError):
+        with self.assertRaises(TypeError) as e:
             Rectangle("1", 2)
-
-        with self.assertRaises(TypeError):
+        self.assertEqual(str(e.exception), "width must be an integer")
+        with self.assertRaises(TypeError) as e:
             Rectangle(1, "2")
+        self.assertEqual(str(e.exception), "height must be an integer")
+        with self.assertRaises(TypeError) as e:
+            Rectangle(1, 2, "3")
+        self.assertEqual(str(e.exception), "x must be an integer")
+        with self.assertRaises(TypeError) as e:
+            Rectangle(1, 2, 3, "4")
+        self.assertEqual(str(e.exception), "y must be an integer")
+
+
 
 
 if __name__ == '__main__':
