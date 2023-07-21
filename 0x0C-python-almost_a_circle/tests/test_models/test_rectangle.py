@@ -27,6 +27,27 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(box.width, 1)
         self.assertEqual(box.height, 2)
 
+        # test x
+        box = Rectangle(1, 2, 3)
+        self.assertEqual(box.width, 1)
+        self.assertEqual(box.height, 2)
+        self.assertEqual(box.x, 3)
+
+        # test y
+        box = Rectangle(1, 2, 3, 4)
+        self.assertEqual(box.width, 1)
+        self.assertEqual(box.height, 2)
+        self.assertEqual(box.x, 3)
+        self.assertEqual(box.y, 4)
+
+    """test errors"""
+    def test_errors(self):
+        with self.assertRaises(TypeError):
+            Rectangle("1", 2)
+
+        with self.assertRaises(TypeError):
+            Rectangle(1, "2")
+
 
 if __name__ == '__main__':
     unittest.main()
