@@ -62,16 +62,26 @@ class TestSquare(unittest.TestCase):
         sys.stdout = result
         print(Square(2))
         resu_str = result.getvalue()
-        self.assertEqual(resu_str, "[Square] (28) 0/0- 2\n")
+        self.assertEqual(resu_str, "[Square] (30) 0/0- 2\n")
         sys.stdout = result
 
-    def test_display(self):
+    def test_display_0(self):
         """test display method"""
         result = StringIO()
         sys.stdout = result
         Square(4).display()
         resu_str = result.getvalue()
         self.assertEqual(resu_str, "####\n####\n####\n####\n")
+        sys.stdout = result
+
+    def test_display_1(self):
+        """test display method"""
+        result = StringIO()
+        sys.stdout = result
+        Square(4, 2).display()
+        resu_str = result.getvalue()
+        line = '   ####\n   ####\n   ####\n   ####\n'
+        self.assertEqual(resu_str, line)
         sys.stdout = result
 
 

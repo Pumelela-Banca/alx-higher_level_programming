@@ -99,7 +99,7 @@ class TestSquare(unittest.TestCase):
         sys.stdout = result
         print(Rectangle(2, 3))
         resu_str = result.getvalue()
-        self.assertEqual(resu_str, f"[Rectangle] (18) 0/0 - 2/3\n")
+        self.assertEqual(resu_str, f"[Rectangle] (19) 0/0 - 2/3\n")
         sys.stdout = result
 
     def test_display(self):
@@ -110,6 +110,18 @@ class TestSquare(unittest.TestCase):
         resu_str = result.getvalue()
         self.assertEqual(resu_str, "####\n####\n")
         sys.stdout = result
+
+    def test_display_1(self):
+        """test display method"""
+        result = StringIO()
+        sys.stdout = result
+        Rectangle(4, 2, 4).display()
+        resu_str = result.getvalue()
+        line = "     ####\n     ####\n"
+        self.assertEqual(resu_str, line)
+        sys.stdout = result
+
+    
 
 
 if __name__ == '__main__':
