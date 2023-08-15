@@ -1,2 +1,2 @@
---Shows description of table
+-- Shows description of table
 SHOW CREATE TABLE;
