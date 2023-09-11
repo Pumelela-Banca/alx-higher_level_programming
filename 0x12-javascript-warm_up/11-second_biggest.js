@@ -12,7 +12,7 @@ if (argv.length < 4) {
       big = parseInt(argv[i]);
     } else if (parseInt(argv[i]) > second) {
       second = parseInt(argv[i]);
-    }    
+    }
   }
   console.log(second);
 }
