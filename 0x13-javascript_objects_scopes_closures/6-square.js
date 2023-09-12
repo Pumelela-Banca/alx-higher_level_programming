@@ -5,7 +5,7 @@ const Rectangle = require('./5-square');
 module.exports = class Square extends Square {
   charPrint (c) {
     if (c === undefined) {
-      this.charPrint();
+      this.print();
     } else {
       for (let i = 0; i < this.height; i++) {
         console.log(c.repeat(this.width));

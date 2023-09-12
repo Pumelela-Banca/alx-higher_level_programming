@@ -1,2 +1,2 @@
 
-exports.nbOccurences = function (list, searchElement)
+exports.nbOccurences = function (list, searchElement) {}
