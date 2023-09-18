@@ -20,4 +20,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     session = Session()
     states = session.query(State).order_by(State.id)
-    print(f"{states.id}: {states.name}")
+    if states is None:
+        print()
+    else:
+        print(f"{states.id}: {states.name}")
