@@ -14,7 +14,7 @@ if __name__ == "__main__":
                          passwd=sys.argv[2], db=sys.argv[3])
     with db.cursor() as cur:
         cur.execute("""SELECT * FROM states
-         WHERE name LIKE '%N' ORDER BY id""")
+         WHERE name LIKE 'N%' ORDER BY id""")
         for i in cur.fetchall():
             print(i)
     db.close
