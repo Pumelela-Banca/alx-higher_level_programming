@@ -10,10 +10,10 @@ import MySQLdb
 
 
 if __name__ == "__main__":
-    db = connect(host="localhost", user=sys.argv[1], port=3306,
+    db = MySQLdb.connect(host="localhost", user=sys.argv[1], port=3306,
                          passwd=sys.argv[2], db=sys.argv[3])
     with db.cursor() as cur:
-        cursor.execute("""SELECT name FROM states WHERE name LIKE '%N' ORDER BY id""")
+        cur.execute("""SELECT name FROM states WHERE name LIKE '%N' ORDER BY id""")
         for i in cur.fetchall():
             print(i)
     db.close
