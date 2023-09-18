@@ -15,7 +15,7 @@ if __name__ == "__main__":
     try:
         db.query("SELECT * FROM states ORDER BY id")
         r = db.store_result()
-        for i in r:
+        for i in r.fetchall():
             print(i)
     except _mysql.MySQLError:
         pass
