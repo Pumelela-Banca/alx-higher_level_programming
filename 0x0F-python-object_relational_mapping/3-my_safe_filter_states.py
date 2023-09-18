@@ -19,7 +19,7 @@ if __name__ == "__main__":
         if safe not in cur.fetchall():
             exit()
         cur.execute("""SELECT * FROM states
-         WHERE name LIKE BINARY '{}' ORDER BY id""".format())
+         WHERE name LIKE BINARY '{}' ORDER BY id""".format(safe))
         for i in cur.fetchall():
             print(i)
     db.close
