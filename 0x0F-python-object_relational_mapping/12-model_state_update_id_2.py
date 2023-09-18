@@ -20,5 +20,6 @@ if __name__ == "__main__":
     session = Session()
     states = session.query(State).order_by(State.id)
     lookFor = states.filter(states.id == 2).first()
-    lookFor.name = "New Mexico"
-    session.commit()
+    if lookFor:
+        lookFor.name = "New Mexico"
+        session.commit()
