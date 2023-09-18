@@ -16,11 +16,11 @@ if __name__ == "__main__":
         """mysql+mysqldb://{}:{}@localhost:3306/{}""".
         format(sys.argv[1], sys.argv[2], sys.argv[3]))
 
-    Session = sessionmaker(bind=engine)
     Base.metadata.create_all(engine)
+    Session = sessionmaker(bind=engine)
     session = Session()
     states = session.query(State).order_by(State.id)
     if states is None:
-        print()
+        print("Nothing")
     else:
         print(f"{states.id}: {states.name}")
