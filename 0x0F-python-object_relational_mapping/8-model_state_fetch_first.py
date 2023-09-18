@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
 """
-lists first State object from the
-database hbtn_0e_6_usa
+lists first State object from the database hbtn_0e_6_usa
+and prints it, prints Nothing if table empty
 """
 
 import sys
