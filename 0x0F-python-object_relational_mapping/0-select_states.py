@@ -16,5 +16,4 @@ if __name__ == "__main__":
         cur.excecute("SELECT * FROM states ORDER BY id")
         for i in cur.fetchall():
             print(i)
-        cur.close
     db.close
