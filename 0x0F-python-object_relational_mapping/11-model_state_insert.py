@@ -21,8 +21,6 @@ if __name__ == "__main__":
     states = session.query(State).count()
     luisiana = State()
     luisiana.name = "Louisiana"
-    luisiana.id = states + 1
     session.add(luisiana)
     session.commit()
-    session.close()
     print(luisiana.id)
