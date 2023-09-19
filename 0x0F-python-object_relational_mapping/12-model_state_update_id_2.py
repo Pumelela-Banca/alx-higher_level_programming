@@ -5,7 +5,7 @@ adds Louisiana to the db
 """
 
 import sys
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, update
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
 
@@ -19,7 +19,5 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     states = session.query(State).order_by(State.id)
-    lookFor = states.filter(states.id == 2).first()
-    if lookFor:
-        lookFor.name = "New Mexico"
-        session.commit()
+    update(State).values(name='New Mexico')\
+        .where(states.id == 2)
