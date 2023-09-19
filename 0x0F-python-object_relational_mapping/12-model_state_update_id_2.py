@@ -19,5 +19,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     states = session.query(State).order_by(State.id)
-    update(State).values(name='New Mexico')\
-        .where(states.id == 2)
+    if states:
+        update(State).values(name='New Mexico')\
+            .where(states.id == 2)
+    else:
+        print("Not found")
