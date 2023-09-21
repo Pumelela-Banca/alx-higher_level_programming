@@ -9,6 +9,6 @@ if (argv[2] === undefined) {
   if (num === NaN) {
     console.log('Not a number');
   } else {
-    console.log(parseInt(num, 10));
+    console.log('My number: ' + String(parseInt(num, 10)));
   }
 }
