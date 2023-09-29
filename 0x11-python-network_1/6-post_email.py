@@ -8,6 +8,6 @@ import requests
 
 
 if __name__ == "__main__":
-    load = sys.argv[2]
+    load = {'email': sys.argv[2]}
     with requests.post(sys.argv[1], data=load) as response:
         print(f"Your email is: {response.text}")
