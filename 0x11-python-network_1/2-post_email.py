@@ -4,12 +4,14 @@
 enters field in a web
 """
 import sys
-from urllib import request
+import urllib.request
+import urllib.parse
 
 
 if __name__ == "__main__":
-    with request.post(
-            sys.argv[1], sys.orig_argv[2]) as response:
-        new = response.text.decode('utf-8')
-        print(
-            f'Your email is: {new}')
+    params = {"email": sys.argv[2]}
+    new_str = urllib.parse.urlencode(params).encode('utf-8')
+    req = urllib.request.Request(
+        sys.argv[1], data=new_str, method='POST')
+    with urllib.request.urlopen(req) as res:
+        print(res.read().decode('utf-8'))
