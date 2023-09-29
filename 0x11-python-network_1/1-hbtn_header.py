@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Requests data from a library
+Requests header from a web-site
 """
 import sys
 from urllib import request
