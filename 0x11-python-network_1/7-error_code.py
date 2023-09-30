@@ -8,6 +8,8 @@ import requests
 
 
 if __name__ == "__main__":
-    load = sys.argv[2]
-    with requests.post(sys.argv[1],data=load) as response:
-        print(response.text)
+    r = requests.get(sys.argv[1])
+    if r.status_code >= 400:
+        print("code", r.status_code)
+    else:
+        print(r.text)
