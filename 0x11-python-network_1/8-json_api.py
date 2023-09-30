@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""
+"""#!/usr/bin/python3
 Requests header from a web-site
 """
 import sys
