@@ -1,3 +1,4 @@
 #!/bin/bash
 # gets body from web site
-curl -s -i "$1" | grep  -i | cut -d ' ' -f 2
+give_info=$(curl -v "$1")
+echo "$give_info" | wc -l
