@@ -1,3 +1,3 @@
 #!/bin/bash
 # lists all methods
-curl -i -X OPTIONS [^1^][1]
+curl -is "$1" -X OPTIONS
