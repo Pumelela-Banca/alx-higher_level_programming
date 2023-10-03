@@ -1,3 +1,3 @@
 #!/bin/bash
 # gets body of web
-curl -sL "$1"
+curl -sLf "$1" -X GET
