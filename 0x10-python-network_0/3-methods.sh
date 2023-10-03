@@ -1,3 +1,3 @@
 #!/bin/bash
 # lists all methods
-curl -is "$1" -X OPTIONS
+curl -si $1 | grep -i "Allow" | cut -d ' ' -f 2
