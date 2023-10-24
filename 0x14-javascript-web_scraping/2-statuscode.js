@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-require('request').request(process.argv[2], (err, res) => {
+require('request')(process.argv[2], (err, res) => {
   if (err) {
     console.error(err);
   } else {
